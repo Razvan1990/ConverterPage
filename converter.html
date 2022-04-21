@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" description="Money converter" name="converter-page">
+	<meta name="keywords" content="Lei, Euro, Dollars, Pounds">
+	<title>Money converter</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src ="conversion.js"></script>
+	<script type="text/javascript" src ="chooser.js"></script>
+	<script type="text/javascript" src ="modify.js"></script>
+	<link rel="stylesheet" type="text/css" href="converter.css">
+	<link rel="icon" href ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ85BuNYn261QQYz-JVZ-hYoIyjMvZOutnq6g&usqp=CAU">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+	<div class ="converter">
+		<h1>Converter API</h1>
+		
+
+		<div class ="form-page">
+			<div class ="content">
+
+				<h3>Please choose from the list below in what unit you want to convert your value?</h3>
+				<br>
+				<!-- insert here image if you have net-->
+				<div id ="Euros">
+					
+					<div id = "euroVal">Convert lei to euro</div>
+				<!--	<input type="number" min =0 max = 10000  id ="euro" name ="euro" placeholder="Insert amount here" required="yes" class ="money"> -->
+					<img src="romania.jpg" height = 30px width="100px"/> <img src ="sageata.jpg" height="30px" width ="100px"/><img src="europa.png" height="30px" width="100px"/>
+					<input type ="checkbox" id = "euro" name="conversion" value ="euro" title="Just one option" onclick="chooseConversion();">			
+					<br>
+				</div>
+				<div id ="Dollars">
+					<div id ="dollarVal">Convert lei to dollars</div>
+				<!--	<input type="number" name="dollars" min=0 max =10000 id ="dollars" placeholder="Insert amount here" required="yes" class="money"> -->
+					<img src="romania.jpg" height ="30px" width="100px"/> <img src ="sageata.jpg" height="30px" width ="100px"/><img src="sua.png" height="30px" width="100px"/>
+					<input type ="checkbox" id ="dollar"  name="conversion" value ="dollar" title="Just one option" onclick="chooseConversion();">
+					<br>
+				</div>
+				<div id ="Pounds">
+					<div id ="poundVal">Convert lei to pounds</div>
+					<img src="romania.jpg" height = "30px" width="100px"/> <img src ="sageata.jpg" height="30px" width ="100px"/><img src="marea britanie.png" height="30px" width="100px"/>
+					<input type ="checkbox" id ="pounds" name ="conversion" value ="pounds" title="Just one option" onclick="chooseConversion();">
+					<br>
+				</div>
+				<div id = "Yuan">
+					<div id="yuanVal">Convert lei to yuans</div>
+					<img src="romania.jpg" height = "30px" width="100px"/> <img src ="sageata.jpg" height="30px" width ="100px"/><img src="china.png" height="30px" width="100px"/>
+					<input type ="checkbox" id ="yuan" name ="conversion" value ="yuan" title="Just one option" onclick="chooseConversion();">
+					<br>
+				</div>
+				<div id ="Ruble">
+					<div id="rubleVal">Convert lei to ruble</div>
+					<img src="romania.jpg" height = "30px" width="100px"/> <img src ="sageata.jpg" height="30px" width ="100px"/><img src="rusia2.png" height="30px" width="100px"/>
+					<input type ="checkbox" id ="ruble" name ="conversion" value ="ruble" title="Just one option" onclick="chooseConversion();">
+					<!--flag of Rusia-->
+					<br>
+				</div>
+				<div id ="Leu moldovenesc">
+					<div id="moldovenescVal">Convert lei to lei moldovenesti</div>
+					<img src="romania.jpg" height = "30px" width="100px"/> <img src ="sageata.jpg" height="30px" width ="100px"/><img src="moldova.png" height="30px" width="100px"/>
+					<input type ="checkbox" id ="moldovenesc" name ="conversion" value ="moldovenesc" title ="Just one option" onclick="chooseConversion();">		
+					<br>
+				</div>
+				<div id ="Coroana suedeza">
+					<div id="swedishVal">Convert lei to swedish crowns</div>
+					<img src="romania.jpg" height = "30px" width="100px"/> <img src ="sageata.jpg" height="30px" width ="100px"/><img src="suedia.png" height="30px" width="100px"/>
+					<input type ="checkbox" id ="swedish" name ="conversion" value ="swedish" title ="Just one option" onclick="chooseConversion();">
+					<!-- flag of Sweden-->
+					<br>
+				</div>
+			</div>
+
+			<div class ="input_page">
+
+				<h3>1.Please choose in what value you want to convert your lei by selecting the currency</h3>
+				<!--insert here what is selected through innerHTML-->
+				<div id ="selection">
+					<h3> Selected value: <p id="selected"></p></h3>
+				</div>
+				<h3>2.Introduce below the amount of money in the numeric box</h3>
+				
+				<br><br>
+
+				<label for="money">Introduce your amount</label>
+				<input type="number" name="money" id ="money" min ="0" max="100000" step ="5" class="money" placeholder="Insert amount" style="width:300px" oninput="modifyText()">
+				<br>
+				<h3 id ="click" >Click the button on the right to view the converted amount</h3>
+			</div>
+
+			<div class="answer_page">
+				<input type ="button" class ="convert-button" value="Convert" title ="Click here for generation" style="width:300px;height:75px" onclick="convertLei();">
+				<!-- need here to use document.getElementById("convert") = valueConverted -->
+				<br>
+				<h3> Converted value</h3>
+				<input type ="text" id ="convert" name ="convert" style="width:290px;height: 75px" title="Here you will see converted valued">
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

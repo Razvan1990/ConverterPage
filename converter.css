@@ -1,0 +1,103 @@
+html{
+margin:0;
+height:100%;
+text-align: center;	
+height:100%;
+background-repeat: no-repeat;
+background-position: fixed;
+background-size: cover;
+scroll-behavior: smooth;
+display: inline-block;
+background-image: url("currency-3.jpeg");
+background-repeat: no-repeat;
+background-blend-mode: multiply;
+
+
+}
+body{
+	display: inline-flex;
+
+}
+
+.form-page{
+    background: linear-gradient(to right, #f0fb88, #cfafaf,#acd9ac);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 10rem;
+    border: 10px double darkslategray;
+	}
+
+
+.converter >h1{
+	text-align: :center;
+    display: inline-block;
+    margin: 0 auto;
+    color: #e3e3f5;
+    font-size: 40px;
+    font-weight: 1000;
+    margin-down: 50px;
+    font-family: Arial Black;
+}
+.input_page >h3{
+	font-size: 16px;
+}
+#selection{
+	text-align: left;
+	margin-left: 12em;
+}
+#Euros,#Dollars,#Pounds,#Yuan, #Ruble{ 
+	font-size: 16px;
+	font-family: Comic Sans;
+	font-style: italic;
+	
+}
+div[id="Leu moldovenesc"]{
+	font-size: 16px;
+	font-family: Comic Sans;
+	font-style: italic;
+	
+}
+div[id="Coroana suedeza"]{
+	font-size: 16px;
+	font-family: Comic Sans;
+	font-style: italic;
+}
+
+input[type="number"]{
+	border-radius: 10%;
+	border: inset 4px dimgrey;
+
+}
+input[type="number"]:focus
+{
+	background-color: yellow;
+	font-size: 15px;
+	font-weight: 500;
+}
+input[type="button"]{
+	border-radius: 20%;
+	border: inset 4px dimgrey;
+	font-size :20px;
+	font-weight: 350;
+	font-style: bold;
+	font-family: Arial;
+}
+#convert{
+	border-radius: 30%;
+	border: outset 5px lightskyblue;
+}
+.input_page{
+	margin: 6rem 0 6rem 0;
+    border: 3px solid #000;
+}
+.answer_page{
+	text-align: center;
+    position: relative;
+    width: auto;
+    padding:6rem 0 0 0 ;
+    border: 3px solid #000;
+}
+.content{
+ 	border: 3px solid black;
+
+}
